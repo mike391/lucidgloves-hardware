@@ -1,3 +1,7 @@
+const bool USING_JOYSTICK = false;  //configure if you're using joystick
+const bool FLIP_X = false;          //flip x axis joystick
+const bool FLIP_Y = false;          //flip x axis joystick
+
 int sensorValue = 0;
 String commandFromPC = "";
 int loops = 0;
@@ -5,6 +9,9 @@ int maxFingers[5] = {0,0,0,0,0};
 int minFingers[5] = {1023,1023,1023,1023};
 
 int calib[5] = {500,500,500,500,500};
+
+int xFlip = FLIP_X?-1:1;
+int yFlip = FLIP_Y?-1:1;
 
 void setup() {
   // put your setup code here, to run once:
@@ -50,7 +57,7 @@ void loop() {
       char stringToPrint[75];
       //             fingers        joystick  buttons  gestures
       sprintf(stringToPrint, "%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d\n", 
-      calib[0], calib[1], calib[2], calib[3], calib[4], 0, 0, 0, 0, 0, 0, 0, 0);
+      calib[0], calib[1], calib[2], calib[3], calib[4], USING_JOYSTICK?joyX*xFlip:1023/2, USING_JOYSTICK?joyY*yFlip:1023/2, 1 - joyClick, 0, 0, 0, 0, 0);
       Serial.print(stringToPrint);
   }
 }
