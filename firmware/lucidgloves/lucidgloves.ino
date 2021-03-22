@@ -28,7 +28,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //commandFromPC = Serial.readStringUntil('\n');
-  delay(16);
+  delay(4);
   //delay(300);
   //if (commandFromPC == "READ_VALUES")
   //if (commandFromPC.length() > 1)
