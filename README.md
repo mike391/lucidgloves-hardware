@@ -13,10 +13,10 @@ The assembly **for each hand** is as follows:
 * Tensioner (5x)
 * Cover (5x)
 * Holder (5x)
-* GuideRing (2x per finger, 1x for thumb)
-* EndCap (1x per finger, can be substituted for smaller guide ring) 
+* GuideRing (2x per finger, 1x for thumb, will need to be resized to fit)
+* EndCap (1x per finger, will need to be resized to fit) 
 
-Disclaimer: You WILL need to print multiple sizes of the EndCap and GuideRing to fit the size of your fingers. Resize these in your slicer. Alternatively, you could print them in TPU for more flexible sizing. I recommend resizing the EndCaps non-uniformally to squish them down to fit the oval shape of your fingers, this way they don't rotate around.
+Guide for printing parts: [Printing guide](https://github.com/LucidVR/lucidgloves-hardware/wiki/Parts-Printing-Guide)
 
 **Required parts for each hand: [Parts List](https://github.com/LucidVR/lucidgloves-hardware/wiki/Prototype-3-Parts-List)**  
 Optional:  
