@@ -7,13 +7,15 @@ Use the lucidgloves.ino file in the firmware folder and flash it onto an arduino
 
 # Hardware
 STL files for 3D printing are located in the hardware folder. 
+*Prototype 3.1 models are currently experimental*
 
 The assembly **for each hand** is as follows:
 * Spool (5x)
 * Tensioner (5x)
 * Cover (5x)
 * Holder (5x)
-* GuideRing (2x per finger, 1x for thumb, will need to be resized to fit)
+* GuideRing(Will need to be resized) OR GuideNode(3.1) (2+ per finger, 1+ for thumb)
+
 * EndCap (1x per finger, will need to be resized to fit) 
 
 Guide for printing parts: [Printing guide](https://github.com/LucidVR/lucidgloves-hardware/wiki/Parts-Printing-Guide)
