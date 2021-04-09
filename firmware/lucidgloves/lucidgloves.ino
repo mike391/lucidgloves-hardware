@@ -51,9 +51,10 @@ void loop() {
         }
       }
       char stringToPrint[75];
+      bool grabbing = (calib[0] + calib[1] + calib[2] + calib[3]) / 4 <= 1023/2 ? 0:1;
       //                       fingers        joystick  buttons  gestures
       sprintf(stringToPrint, "%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d&%d\n", 
-      calib[0], calib[1], calib[2], calib[3], calib[4], USING_JOYSTICK?joyX*xFlip:1023/2, USING_JOYSTICK?joyY*yFlip:1023/2, 1 - joyClick, 0, 0, 0, 0, 0);
+      calib[0], calib[1], calib[2], calib[3], calib[4], USING_JOYSTICK?joyX*xFlip:1023/2, USING_JOYSTICK?joyY*yFlip:1023/2, 1 - joyClick, calib[1]<=(1023/2)?0:1, 0, 0, grabbing, 0);
       Serial.print(stringToPrint);
       Serial.flush();
   }
